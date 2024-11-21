@@ -1,38 +1,128 @@
+/* General Styles */
 body {
-  display: flex;
-  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  background-color: #1c1c1e;
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-align: center;
 }
 
+.appContainer {
+  padding: 2rem;
+}
+
+.appTitle {
+  font-size: 2.5rem;
+  color: #6c63ff;
+  margin-bottom: 1.5rem;
+}
+
+/* Task Section Styling */
+.taskSection {
+  margin: 2rem 0;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.taskSection h2 {
+  color: #ff6f61;
+}
+
+/* Add Task Form */
 .addTaskForm {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin-bottom: 2rem;
+  gap: 15px;
+  margin-bottom: 1.5rem;
 }
 
+.addTaskForm input {
+  padding: 10px;
+  width: 250px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.addTaskForm button {
+  padding: 10px 20px;
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.addTaskForm button:hover {
+  background-color: #5a52db;
+}
+
+/* Task Item */
 .task {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  margin: 10px 0;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.task:hover {
+  transform: scale(1.02);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .taskButtons {
   display: flex;
-  gap: 5px;
-}
-
-.dialog {
-  display: flex;
-  justify-content: center;
   gap: 10px;
-  margin: 0 1rem 1rem 1rem;
 }
 
-.flex {
-  display: flex;
+.task button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  color: white;
 }
 
+.task button.edit {
+  background-color: #ff6f61;
+}
+
+.task button.edit:hover {
+  background-color: #e65a50;
+}
+
+.task button.delete {
+  background-color: #f44336;
+}
+
+.task button.delete:hover {
+  background-color: #d32f2f;
+}
+
+/* Completed Task */
 .done {
   text-decoration: line-through;
+  color: gray;
+}
+
+/* Toggle Button */
+.toggleButton {
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toggleButton:hover {
+  background-color: #e65a50;
 }
